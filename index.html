@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>It’s Not Coming Home — Since 30 July 1966</title>
+  <meta name="description" content="A brutally simple counter since 30 July 1966. Subscribe for updates, memes, and merch when it drops." />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="It’s Not Coming Home">
+  <meta property="og:description" content="Counting since the final whistle on 30 July 1966.">
+  <meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/favicon.ico">
+
+  <!-- Analytics (Plausible) -->
+  <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Basic Schema -->
+  <script type="application/ld+json">
+  { "@context":"https://schema.org", "@type":"WebSite",
+    "name":"It’s Not Coming Home", "url":"https://yourdomain.com/" }
+  </script>
+
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Primary">
+      <a class="brand" href="./">It’s Not Coming Home</a>
+      <div class="links">
+        <a class="active" href="./">Home</a>
+        <a href="./about/">About</a>
+        <a href="./gallery/">Gallery</a>
+        <a href="./merchandise/">Merchandise</a>
+        <a href="./get-in-touch/">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="headline">It’s Not Coming Home</h1>
+        <p class="tagline">Counting since the final whistle on 30 July 1966.</p>
+
+        <div class="timer" aria-live="polite" aria-label="Elapsed time since 30 July 1966">
+          <div class="timer-row">
+            <div class="time-box"><span id="years" class="num">0</span><span class="label">Years</span></div>
+            <div class="time-box"><span id="days" class="num">0</span><span class="label">Days</span></div>
+            <div class="time-box"><span id="hours" class="num">00</span><span class="label">Hours</span></div>
+            <div class="time-box"><span id="minutes" class="num">00</span><span class="label">Minutes</span></div>
+            <div class="time-box"><span id="seconds" class="num">00</span><span class="label">Seconds</span></div>
+          </div>
+          <p class="subtext">Adjusted for leap years & DST.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inline subscribe teaser on the home page -->
+    <section class="container pad-y">
+      <h2>Stay informed</h2>
+      <p>Get match-day drops, new memes, and first dibs on merch.</p>
+
+      <!-- Buttondown embed (replace YOUR_BUTTONDOWN_USERNAME) -->
+      <form class="subscribe-form"
+            action="https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME"
+            method="post" target="popupwindow"
+            onsubmit="window.open('https://buttondown.email/YOUR_BUTTONDOWN_USERNAME','popupwindow')">
+        <label for="bd-email">Email address</label>
+        <div class="subscribe-row">
+          <input id="bd-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </div>
+        <small class="muted">No spam. Unsubscribe anytime.</small>
+      </form>
+      <!-- If you prefer Netlify Forms later, I can switch this in one line. -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> It’s Not Coming Home</div>
+  </footer>
+
+  <script src="./assets/main.js" defer></script>
+</body>
+</html>

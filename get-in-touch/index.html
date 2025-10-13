@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Subscribe — It’s Not Coming Home</title>
+  <meta name="description" content="Subscribe for match-day drops, new memes, and merch announcements." />
+  <link rel="canonical" href="https://itsnotcominghome.com/subscribe/">
+  <link rel="icon" href="../assets/favicon.ico">
+  <meta property="og:title" content="Subscribe — It’s Not Coming Home">
+  <meta property="og:description" content="No spam. Unsubscribe anytime.">
+  <meta property="og:image" content="https://itsnotcominghome.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script defer data-domain="itsnotcominghome.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header class="site-header"><nav class="container nav" aria-label="Primary">
+  <a class="brand" href="../">It’s Not Coming Home</a>
+  <div class="links"><a href="../">Home</a><a href="../about/">About</a><a href="../gallery/">Gallery</a><a href="../merchandise/">Merchandise</a><a class="active" href="../get-in-touch/">Subscribe</a></div>
+</nav></header>
+<main class="container pad-y">
+  <h1>Subscribe</h1>
+  <p>Get updates when we ship new memes, match-day posts, and the merch drop.</p>
+
+  <!-- Buttondown: replace YOUR_BUTTONDOWN_USERNAME -->
+  <form class="subscribe-form"
+        action="https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME"
+        method="post" target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/YOUR_BUTTONDOWN_USERNAME','popupwindow')">
+    <label for="bd-email">Email address</label>
+    <div class="subscribe-row">
+      <input id="bd-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+      <button type="submit">Subscribe</button>
+    </div>
+    <small class="muted">No spam. Unsubscribe anytime.</small>
+  </form>
+
+  <hr class="divider" />
+  <p class="muted small">Prefer RSS? Add <code>https://itsnotcominghome.com/feed.xml</code> to your reader (we’ll add a feed soon).</p>
+</main>
+<footer class="site-footer"><div class="container">© <span id="year"></span> It’s Not Coming Home</div></footer>
+<script src="../assets/main.js" defer></script>
+</body>
+</html>
