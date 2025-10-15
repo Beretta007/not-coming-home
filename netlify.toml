@@ -1,34 +1,49 @@
+# ===========================
+# Netlify config for itsnotcominghome.com
+# ===========================
+
 # --- Redirects: make apex the canonical host and force HTTPS ---
 
 # 1) HTTP apex -> HTTPS apex
 [[redirects]]
-from = "http://itsnotcominghome.com/*"
-to = "https://itsnotcominghome.com/:splat"
-status = 301
-force = true
+  from = "http://itsnotcominghome.com/*"
+  to = "https://itsnotcominghome.com/:splat"
+  status = 301
+  force = true
 
 # 2) HTTP www -> HTTPS apex
 [[redirects]]
-from = "http://www.itsnotcominghome.com/*"
-to = "https://itsnotcominghome.com/:splat"
-status = 301
-force = true
+  from = "http://www.itsnotcominghome.com/*"
+  to = "https://itsnotcominghome.com/:splat"
+  status = 301
+  force = true
 
 # 3) HTTPS www -> HTTPS apex (canonical host)
 [[redirects]]
-from = "/*"
-to = "https://itsnotcominghome.com/:splat"
-status = 301
-force = true
-conditions = { Host = ["www.itsnotcominghome.com"] }
+  from = "/*"
+  to   = "https://itsnotcominghome.com/:splat"
+  status = 301
+  force  = true
+  conditions = { Host = ["www.itsnotcominghome.com"] }
 
-# --- Sensible security headers for all routes ---
-
+# --- Security & transport headers for all routes ---
 [[headers]]
-for = "/*"
-[headers.values]
-  Referrer-Policy = "strict-origin-when-cross-origin"
-  X-Content-Type-Options = "nosniff"
-  X-Frame-Options = "DENY"
-  # Opt-out of powerful features by default; loosen later if you need them
-  Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+  for = "/*"
+  [headers.values]
+    # QUIC/HTTP3 workaround: tell browsers not to use HTTP/3 for this origin.
+    Alt-Svc = "clear"
+
+    # Sensible, low-risk security headers
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+
+    # Opt out of powerful features by default; loosen later if needed.
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+
+    # NOTE: We are NOT setting HSTS while diagnosing TLS/IPv6/HTTP3 routing.
+    # Once everything is stable, you can enable:
+    # Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+    # Optionally, you can add a basic CSP later (start *very* relaxed and tighten):
+    # Content-Security-Policy = "default-src 'self'; img-src 'self' https: data:; script-src 'self'; style-src 'self' 'unsafe-inline'"
