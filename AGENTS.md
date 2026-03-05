@@ -14,6 +14,14 @@
 - Never commit secrets. Use .env.example for new environment variables.
 - UI and layout changes are allowed only when the task explicitly requests a redesign, and the task must specify scope and acceptance criteria.
 
+## Security invariants (do not violate)
+- Never add or commit secrets (API keys, tokens, credentials) to the repo or client-side JS.
+- Avoid new third-party scripts and dependencies unless explicitly requested and reviewed.
+- Do not rely on obscurity. Assume attackers can read all client code and replay network requests.
+- If adding any serverless/API functionality, enforce authorization server-side and add basic rate limiting.
+- Treat all user-provided input as hostile and validate/sanitize accordingly.
+- Prefer security headers and add/strengthen CSP when embedding external content grows.
+
 ## Working rules
 # Why: small diffs are reviewable diffs. Clear plans prevent accidental refactors.
 - Before coding, write a short plan (5 to 10 bullets).
