@@ -184,6 +184,58 @@ a,button,input,textarea,select{font:inherit}
   color:var(--muted);
   background:rgba(255,255,255,0.35);
 }
+.card-body{padding:var(--space-m)}
+.card-body > :last-child{margin-bottom:0}
+
+.page-intro{
+  max-width:74ch;
+  color:var(--muted);
+}
+.section-stack{display:grid;gap:var(--space-l)}
+.content-panel{
+  background:rgba(255,255,255,0.42);
+  border:1px solid var(--border);
+  border-radius:var(--radius-m);
+  box-shadow:var(--shadow-soft);
+  padding:var(--space-l);
+}
+.content-panel ul{
+  margin:0 0 var(--space-m);
+  padding-left:1.25rem;
+}
+.content-panel li{margin-bottom:0.4rem}
+.content-panel li:last-child{margin-bottom:0}
+.one-liner{
+  margin:0 0 var(--space-m);
+  color:var(--accent-strong);
+  font-weight:700;
+}
+
+.chip{
+  display:inline-flex;
+  align-items:center;
+  margin-bottom:var(--space-xs);
+  padding:4px 10px;
+  border:1px solid var(--border-strong);
+  border-radius:999px;
+  background:var(--surface-soft);
+  color:var(--accent-strong);
+  font-size:0.74rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+.actions-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:var(--space-xs);
+}
+.actions-row .cta,.actions-row .cta-primary,.actions-row .cta-secondary{margin-top:0}
+
+.product-category + .product-category{margin-top:var(--space-2xl)}
+.product-category h2{margin-bottom:var(--space-s)}
 
 .coming-soon{display:grid;gap:var(--space-s);grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .coming-soon .card{padding:var(--space-m)}
@@ -332,6 +384,9 @@ main.container.pad-y > p{max-width:68ch}
   .nav{min-height:56px;padding:7px 0}
   .links{width:100%;justify-content:flex-start}
   .pad-y{padding:var(--space-xl) 0}
+  .content-panel{padding:var(--space-m)}
+  .actions-row{flex-direction:column;align-items:flex-start}
+  .actions-row .cta,.actions-row .cta-primary,.actions-row .cta-secondary{width:min(100%,340px)}
   .home-page .home-main > .home-section{padding:var(--space-xl) 0}
   .home-page .hero{padding:var(--space-2xl) 0 var(--space-xl)}
   .home-page .timer-row{
