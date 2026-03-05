@@ -55,4 +55,46 @@ body{
 @media (max-width:600px){
   .time-box{min-width:100px;padding:14px}
   .subscribe-row{flex-direction:column}
+  .cta-row{flex-direction:column;gap:12px}
+  .cta-primary,.cta-secondary{width:100%}
+  .social-link{flex:1;min-width:90px}
 }
+
+/* CTA Block */
+.cta-block{padding:40px 0;text-align:center}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-primary,.cta-secondary{
+  padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:700;
+  cursor:pointer;display:inline-block;transition:all 0.2s ease;
+}
+.cta-primary{background:var(--fg);color:#000}
+.cta-primary:hover{opacity:0.9}
+.cta-secondary{background:var(--card);color:var(--fg);border:1px solid var(--border)}
+.cta-secondary:hover{border-color:var(--fg)}
+
+/* Social Block */
+.social-block{padding:40px 0;text-align:center}
+.social-title{margin:0 0 20px;font-size:1.4rem}
+.social-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.social-link{
+  padding:12px 20px;background:var(--card);color:var(--fg);text-decoration:none;
+  border:1px solid var(--border);border-radius:12px;font-weight:600;
+  transition:all 0.2s ease;min-width:120px;display:inline-block;
+}
+.social-link:hover{border-color:var(--fg);background:var(--card)}
+
+/* Merch Teaser */
+.merch-teaser{padding:40px 0;text-align:center;border-top:1px solid var(--border)}
+.merch-teaser h2{margin:0 0 12px;font-size:1.8rem}
+.merch-teaser p{color:var(--muted);margin:0 0 24px}
+.merch-link{
+  display:inline-block;padding:12px 28px;background:var(--card);color:var(--fg);
+  text-decoration:none;border:1px solid var(--border);border-radius:12px;
+  font-weight:600;transition:all 0.2s ease;
+}
+.merch-link:hover{border-color:var(--fg)}
+
+/* Subscribe Section */
+.subscribe-section{padding:56px 0;border-top:1px solid var(--border)}
+.subscribe-section h2{margin:0 0 12px;font-size:1.8rem}
+.subscribe-section > .container > p{color:var(--muted);margin:0 0 24px}

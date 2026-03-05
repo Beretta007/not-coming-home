@@ -17,7 +17,9 @@
   <meta name="twitter:description" content="Counting since the final whistle on 30 July 1966.">
 
   <!-- Favicon -->
-  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="./assets/favicon-16.png" type="image/png" sizes="16x16">
 
   <!-- Analytics (Plausible) -->
   <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
@@ -45,6 +47,7 @@
   </header>
 
   <main>
+    <!-- Hero: Clock & Primary Message -->
     <section class="hero">
       <div class="container">
         <h1 class="headline">It’s Not Coming Home</h1>
@@ -63,24 +66,56 @@
       </div>
     </section>
 
-    <!-- Inline subscribe teaser on the home page -->
-    <section class="container pad-y">
-      <h2>Stay informed</h2>
-      <p>Get match-day drops, new memes, and first dibs on merch.</p>
-
-      <!-- Buttondown embed (replace YOUR_BUTTONDOWN_USERNAME) -->
-      <form class="subscribe-form"
-            action="https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME"
-            method="post" target="popupwindow"
-            onsubmit="window.open('https://buttondown.email/YOUR_BUTTONDOWN_USERNAME','popupwindow')">
-        <label for="bd-email">Email address</label>
-        <div class="subscribe-row">
-          <input id="bd-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
-          <button type="submit">Subscribe</button>
+    <!-- CTA Block: Primary + Secondary -->
+    <section class="cta-block">
+      <div class="container">
+        <div class="cta-row">
+          <a href="./get-in-touch/" class="cta-primary">Follow the Countdown</a>
+          <a href="./merchandise/" class="cta-secondary">Browse Merch</a>
         </div>
-        <small class="muted">No spam. Unsubscribe anytime.</small>
-      </form>
-      <!-- If you prefer Netlify Forms later, I can switch this in one line. -->
+      </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="social-block">
+      <div class="container">
+        <h2 class="social-title">Follow</h2>
+        <div class="social-links">
+          <a href="https://www.instagram.com/its_notcominghome/" target="_blank" rel="noopener noreferrer" class="social-link instagram">Instagram</a>
+          <a href="https://www.tiktok.com/@its_notcominghome" target="_blank" rel="noopener noreferrer" class="social-link tiktok">TikTok</a>
+          <a href="https://x.com/Notcominghome66" target="_blank" rel="noopener noreferrer" class="social-link x">X</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Merch Teaser -->
+    <section class="merch-teaser">
+      <div class="container">
+        <h2>Limited Edition Merch</h2>
+        <p>Exclusive designs celebrating 60 years of heartbreak.</p>
+        <a href="./merchandise/" class="merch-link">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Stay Informed / Subscribe -->
+    <section class="subscribe-section">
+      <div class="container">
+        <h2>Get Updates</h2>
+        <p>Match-day drops, memes, and first access to new drops.</p>
+
+        <!-- Buttondown embed (replace YOUR_BUTTONDOWN_USERNAME) -->
+        <form class="subscribe-form"
+              action="https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME"
+              method="post" target="popupwindow"
+              onsubmit="window.open('https://buttondown.email/YOUR_BUTTONDOWN_USERNAME','popupwindow')">
+          <label for="bd-email">Email address</label>
+          <div class="subscribe-row">
+            <input id="bd-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+            <button type="submit">Subscribe</button>
+          </div>
+          <small class="muted">No spam. Unsubscribe anytime.</small>
+        </form>
+      </div>
     </section>
   </main>
 
